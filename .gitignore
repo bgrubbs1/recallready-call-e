@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+data/
+coverage/
+review/
+INTERNAL_HANDOFF.md
+*.log
+upstream-awesome/
+upstream-integrations/
