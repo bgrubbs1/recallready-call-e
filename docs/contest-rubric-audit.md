@@ -8,9 +8,9 @@ Checked against the official rules and overview on 2026-08-09.
 | --- | --- | --- |
 | Functional software application | Node/TypeScript application and complete browser workflow | Implemented |
 | CALL-E actually used at runtime | `CalleCallProvider` imports `CalleClient` and calls `client.calls.createAndWait` | Implemented; live success evidence pending |
-| Consistent installation and operation | Node 24.14.0 and pnpm 11.16.0 pins, frozen lockfile, mock path, build, and 12 no-call tests | Freshly verified August 10 |
+| Consistent installation and operation | Node 24.14.0 and pnpm 11.16.0 pins, frozen lockfile, mock path, build, and 18 no-call tests | Freshly verified August 10 |
 | New during contest period | Repository history and build package date are within the submission period | Must remain truthful at submission |
-| Public contribution PR | `https://github.com/CALLE-AI/awesome-phone-call-agents/pull/133` at commit `e9377a7` | Open and validator-complete; organizer review/merge pending |
+| Public contribution PR | `https://github.com/CALLE-AI/awesome-phone-call-agents/pull/133` | Open; August 10 safety feedback is addressed by explicit recipient binding, SDK idempotency, durable checkpoints, and fail-closed result validation; organizer re-review/merge pending |
 | Public video under three minutes | Must show real app and real authorized CALL-E run | Pending live run and video |
 | Free judge access | Mock workflow runs without credentials; source is public | Implemented locally; public deployment pending/optional |
 | CALL-E account email | Private submission field | Bradley action |
@@ -42,15 +42,15 @@ Strengths:
 Strengths:
 
 - Actual CALL-E SDK import and runtime call.
-- Strict result schema.
+- Strict result schema plus terminal status, task completion, one-recipient binding, enum, confidence, and evidence validation before display.
 - Provider abstraction with deterministic no-call test route.
 - Authoritative server-side refetch before preview.
-- Masking, TTL, single-use approval, stable fingerprint, body limit, CSP, and fail-closed validation.
+- Masking, TTL, single-use approval, stable SDK idempotency, a hash-only durable ambiguous-call checkpoint, body limit, CSP, and fail-closed validation.
 
 Evidence still needed:
 
 - Successful live CALL-E response on the authorized demo route.
-- Organizer review/merge of the open validator-complete PR, plus any requested changes.
+- Organizer re-review/merge of the open validator-complete PR, plus any further requested changes.
 
 ### Product experience and demo
 

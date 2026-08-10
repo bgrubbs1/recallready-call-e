@@ -75,7 +75,8 @@ Important files:
 
 - `src/cpsc.ts` — official recall API adapter.
 - `src/call-task.ts` — constrained call task and JSON result schema.
-- `src/workflow.ts` — consent, preview, expiry, idempotency, and one-call gate.
+- `src/workflow.ts` — consent, preview, expiry, stable idempotency, and one-call gate.
+- `src/checkpoints.ts` — hash-only durable checkpoint that blocks ambiguous restart redials without storing a phone number or transcript.
 - `src/providers.ts` — deterministic mock and actual `CalleClient` runtime.
 - `public/` — complete user-facing workflow.
 - `test/` — unit, integration, safety, and privacy checks.
@@ -86,7 +87,7 @@ Important files:
 pnpm check
 ```
 
-Tests cover official-data parsing, phone extraction/masking, demo consent, single-use previews, expiry, exact approval, structured mock results, task boundaries, and private-data markers.
+Tests cover official-data parsing, phone extraction/masking, demo consent, single-use previews, expiry, exact approval, SDK recipient/idempotency binding, strict terminal-result validation, durable restart protection, structured mock results, task boundaries, and private-data markers.
 
 No test places a real phone call.
 
@@ -94,7 +95,7 @@ No test places a real phone call.
 
 - **Real-world impact:** makes safety recalls actionable for ordinary households without forcing them to navigate an uncertain hotline blindly.
 - **Quality of idea:** combines authoritative public grounding with a minimum-data phone-resolution layer, instead of building a generic caller.
-- **Technical implementation:** CALL-E is imported and invoked at runtime through `CalleClient`; structured output, mock/live provider separation, approval, idempotency, masking, and fail-closed states are implemented.
+- **Technical implementation:** CALL-E is imported and invoked at runtime through `CalleClient`; the approved recipient and SDK idempotency option are explicit; a hash-only durable checkpoint blocks ambiguous redials; and terminal status, task completion, recipient binding, enums, confidence, and evidence all fail closed before a remedy is shown.
 - **Product experience and demo:** the browser shows the whole path from official search to a human-readable remedy plan, with a safe no-call route available to every judge.
 
 See `docs/contest-rubric-audit.md` and `docs/privacy-and-safety.md` for the detailed audit.
