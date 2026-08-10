@@ -7,6 +7,8 @@ data/
 coverage/
 review/
 INTERNAL_HANDOFF.md
+PRIVATE_HANDOFF.md
+handoff/
 *.log
 upstream-awesome/
 upstream-integrations/

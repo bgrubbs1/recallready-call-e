@@ -34,10 +34,10 @@ CALL-E may retain service-side operational data under its own terms; operators s
 
 ## Run locally
 
-Requires Node.js 22+ and pnpm.
+Requires Node.js 22+ and pnpm. The verified toolchain is pinned in `.node-version` and `package.json`.
 
 ```bash
-pnpm install
+pnpm install --frozen-lockfile
 pnpm check
 pnpm dev
 ```

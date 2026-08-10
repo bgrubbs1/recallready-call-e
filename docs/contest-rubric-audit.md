@@ -8,9 +8,9 @@ Checked against the official rules and overview on 2026-08-09.
 | --- | --- | --- |
 | Functional software application | Node/TypeScript application and complete browser workflow | Implemented |
 | CALL-E actually used at runtime | `CalleCallProvider` imports `CalleClient` and calls `client.calls.createAndWait` | Implemented; live success evidence pending |
-| Consistent installation and operation | pnpm scripts, mock path, tests, no private package dependency | Implemented |
+| Consistent installation and operation | Node 24.14.0 and pnpm 11.16.0 pins, frozen lockfile, mock path, build, and 12 no-call tests | Freshly verified August 10 |
 | New during contest period | Repository history and build package date are within the submission period | Must remain truthful at submission |
-| Public contribution PR | Contribution folder/README must be added to organizer repository | Pending final package |
+| Public contribution PR | `https://github.com/CALLE-AI/awesome-phone-call-agents/pull/133` at commit `e9377a7` | Open and validator-complete; organizer review/merge pending |
 | Public video under three minutes | Must show real app and real authorized CALL-E run | Pending live run and video |
 | Free judge access | Mock workflow runs without credentials; source is public | Implemented locally; public deployment pending/optional |
 | CALL-E account email | Private submission field | Bradley action |
@@ -50,7 +50,7 @@ Strengths:
 Evidence still needed:
 
 - Successful live CALL-E response on the authorized demo route.
-- Organizer repository validator and PR.
+- Organizer review/merge of the open validator-complete PR, plus any requested changes.
 
 ### Product experience and demo
 
@@ -68,4 +68,4 @@ Evidence still needed:
 
 ## Honest readiness
 
-The software is not submission-complete until the live CALL-E run, public source repository, organizer PR, public video, and final Devpost fields exist. No win probability should be represented as certain; judging and field growth are outside the entrant's control.
+The public source repository and organizer PR now exist and are independently visible. The software is not submission-complete until the authorized live CALL-E run, public video, and final Devpost fields exist. Organizer review/merge of PR #133 remains pending. No win probability should be represented as certain; judging and field growth are outside the entrant's control.
