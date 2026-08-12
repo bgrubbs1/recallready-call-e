@@ -42,7 +42,7 @@ Strengths:
 Strengths:
 
 - Actual CALL-E SDK import and runtime call.
-- Strict result schema plus terminal status, task completion, one-recipient binding, enum, confidence, and evidence validation before display.
+- Strict result schema plus terminal status, task completion, one-recipient binding, enum, evidence, and explicit result/completion confidence threshold (minimum 0.75) before display.
 - Provider abstraction with deterministic no-call test route.
 - Authoritative server-side refetch before preview.
 - Masking, TTL, single-use approval, stable SDK idempotency, a hash-only durable ambiguous-call checkpoint, body limit, CSP, and fail-closed validation.

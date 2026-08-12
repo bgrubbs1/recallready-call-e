@@ -95,7 +95,7 @@ No test places a real phone call.
 
 - **Real-world impact:** makes safety recalls actionable for ordinary households without forcing them to navigate an uncertain hotline blindly.
 - **Quality of idea:** combines authoritative public grounding with a minimum-data phone-resolution layer, instead of building a generic caller.
-- **Technical implementation:** CALL-E is imported and invoked at runtime through `CalleClient`; the approved recipient and SDK idempotency option are explicit; a hash-only durable checkpoint blocks ambiguous redials; and terminal status, task completion, recipient binding, enums, confidence, and evidence all fail closed before a remedy is shown.
+- **Technical implementation:** CALL-E is imported and invoked at runtime through `CalleClient`; the approved recipient and SDK idempotency option are explicit; a hash-only durable checkpoint blocks ambiguous redials; and terminal status, task completion, recipient binding, enums, evidence, and both result and completion confidence (minimum 0.75) all fail closed before a remedy is shown.
 - **Product experience and demo:** the browser shows the whole path from official search to a human-readable remedy plan, with a safe no-call route available to every judge.
 
 See `docs/contest-rubric-audit.md` and `docs/privacy-and-safety.md` for the detailed audit.
